@@ -5,10 +5,17 @@ services:
   _defaults:
     public: true
 
-  rstring:
+  generator.random:
     class: src\Project\Service\String\Generator\RandomString
     arguments: ["@service_container"]
 
 
   converter.index:
     class: src\Project\Service\String\Converter\Index
+    arguments: ["@generator.random"]
+
+  converter.rot13:
+    class: src\Project\Service\String\Converter\Rot13
+
+  #probably there is better way to do this or, at least, match it by some pattern like @converter.* ?
+  src\project\Service\String\Converter\ConverterInterface: ['@converter.index', '@converter.rot13']
