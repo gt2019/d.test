@@ -1,5 +1,5 @@
 parameters:
-  rstring.length: 5
+  generator.random.length: 5
 
 services:
   _defaults:

@@ -43,7 +43,7 @@ class RandomString
         $this->pool_last_index = count($this->pool) - 1;
 
         //load lenght of strings from configuration
-        $this->strlen = $container->getParameter('rstring.length');
+        $this->strlen = $container->getParameter('generator.random.length');
     }
 
 
