@@ -6,13 +6,15 @@
             "email": "gt2019test@gmail.com"
         }
     ],
+    "autoload": {
+        "classmap": ["src"]
+    },
     "require": {
         "symfony/dependency-injection": "^4.2",
         "symfony/config": "^4.2",
         "symfony/yaml": "^4.2"
     },
-
-    "autoload": {
-        "classmap": ["src"]
+    "require-dev": {
+        "codeception/codeception": "^2.5"
     }
 }
