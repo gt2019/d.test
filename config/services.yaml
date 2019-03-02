@@ -1,0 +1,5 @@
+services:
+  
+  rstring:
+    class: src\Project\Service\String\Generator\RandomString
+    public: true
