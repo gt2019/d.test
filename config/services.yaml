@@ -1,5 +1,14 @@
+parameters:
+  rstring.length: 5
+
 services:
-  
+  _defaults:
+    public: true
+
   rstring:
     class: src\Project\Service\String\Generator\RandomString
-    public: true
+    arguments: ["@service_container"]
+
+
+  converter.index:
+    class: src\Project\Service\String\Converter\Index
